@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainfall Prediction</title>
+</head>
+<body>
+
+<h2>Rainfall Prediction for Agriculture</h2>
+
+<form action="/predict" method="post">
+
+    <input type="text" name="Jan-Feb" placeholder="Jan-Feb rainfall"><br><br>
+    <input type="text" name="Mar-May" placeholder="Mar-May rainfall"><br><br>
+    <input type="text" name="Jun-Sep" placeholder="Jun-Sep rainfall"><br><br>
+    <input type="text" name="Oct-Dec" placeholder="Oct-Dec rainfall"><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
