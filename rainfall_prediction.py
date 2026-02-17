@@ -1,12 +1,3 @@
-# ==========================================================
-# PROJECT: Exploratory Analysis of Rainfall Data in India
-# PURPOSE: Agricultural Insights and Rainfall Pattern Study
-# DATASET: Rainfall 01-15.csv
-# ==========================================================
-
-# -------------------------------
-# 1. Import Libraries
-# -------------------------------
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -160,3 +151,4 @@ print("Average Annual Rainfall:", df["ANNUAL"].mean())
 print("Highest Rainfall Subdivision:", subdivision_avg.idxmax())
 
 print("\nEDA Completed Successfully!")
+
