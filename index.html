@@ -1,24 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rainfall Prediction</title>
+    <meta charset="UTF-8">
+    <title>Rainfall Prediction - India Agriculture</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Rainfall Prediction for Agriculture</h2>
+<div class="container">
 
-<form action="/predict" method="post">
+    <h2>🌾 Rainfall Prediction for Indian Agriculture</h2>
 
-    <input type="text" name="Jan-Feb" placeholder="Jan-Feb rainfall"><br><br>
-    <input type="text" name="Mar-May" placeholder="Mar-May rainfall"><br><br>
-    <input type="text" name="Jun-Sep" placeholder="Jun-Sep rainfall"><br><br>
-    <input type="text" name="Oct-Dec" placeholder="Oct-Dec rainfall"><br><br>
+    <form action="/predict" method="post">
 
-    <button type="submit">Predict</button>
+        <input type="number" step="any" name="Jan-Feb" placeholder="Jan–Feb Rainfall (mm)" required>
+        <input type="number" step="any" name="Mar-May" placeholder="Mar–May Rainfall (mm)" required>
+        <input type="number" step="any" name="Jun-Sep" placeholder="Jun–Sep Rainfall (mm)" required>
+        <input type="number" step="any" name="Oct-Dec" placeholder="Oct–Dec Rainfall (mm)" required>
 
-</form>
+        <br><br>
+        <button type="submit">Predict Rainfall</button>
 
-<h3>{{ prediction_text }}</h3>
+    </form>
+
+</div>
 
 </body>
 </html>
